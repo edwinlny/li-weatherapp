@@ -17,9 +17,12 @@ module.exports = {
     compress: true,
     port: 8080,
     historyApiFallback: true,
-    proxy: {
-      '/api': 'http://localhost:1111',
-    },
+    proxy: [
+      {
+        context: ['/api'],
+        target: 'http://localhost:1111',
+      }
+    ],
   },
   mode: 'development',
   module: {
@@ -38,6 +41,14 @@ module.exports = {
         test: /.(css|scss)$/,
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       },
     ],
   },
