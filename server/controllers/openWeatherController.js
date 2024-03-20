@@ -26,7 +26,7 @@ openWeatherController.getWeatherOneDay = async (req, res, next) => {
     const parsedResponse = {
       location: response.data.name,
       weather: response.data.weather[0].main,
-      desciption: response.data.weather[0].description,
+      description: response.data.weather[0].description,
       temp: response.data.main.temp,
       humidity: response.data.main.humidity,
       windspeed: response.data.wind.speed,

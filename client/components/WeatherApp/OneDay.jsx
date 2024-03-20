@@ -1,18 +1,6 @@
 import React from 'react';
 import '../../styles/OneDay.css';
-import icons from '../assets/icons.js';
-
-//Icons
-const [
-  clearnight,
-  cloudy,
-  clearday,
-  fewclouds,
-  rain,
-  thunder,
-  snow,
-  searchicon,
-] = icons;
+import { getWeatherIcon } from '../../util/weatherUtils';
 
 const OneDay = (props) => {
   const { oneDayWeather } = props;
@@ -24,12 +12,12 @@ const OneDay = (props) => {
         {oneDayWeather ? oneDayWeather.location : 'Temp'}
       </div>
       <div className="weather-icon">
-        <img src={cloudy} />
+        <img src={getWeatherIcon(oneDayWeather ? oneDayWeather.weather: '')} alt="Weather Icon" />
       </div>
-      <div className="temperature">100F</div>
-      <div className="humidity">Humidity: 50%</div>
-      <div className="wind-speed">Wind Speed: 20mph</div>
-      <div className="description">Rainy</div>
+      <div className="temperature">{oneDayWeather ? oneDayWeather.temp: 'N/A'}</div>
+      <div className="humidity">{oneDayWeather ? `${oneDayWeather.humidity}%`: 'N/A'}</div>
+      <div className="wind-speed">{oneDayWeather ? `${oneDayWeather.windspeed} mph`: 'N/A'}</div>
+      <div className="description">{oneDayWeather ? oneDayWeather.description : 'N/A'}</div>
     </div>
   );
 };
