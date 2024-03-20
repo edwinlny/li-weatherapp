@@ -116,38 +116,38 @@ const WeatherApp = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-blue-500 to-white p-4 flex flex-col items-center justify-center h-screen w-screen">
-      <div className="errorMessage">
+    <div className='bg-gradient-to-b from-blue-500 to-white p-4 flex flex-col items-center justify-center h-screen w-screen'>
+      <div className='errorMessage'>
         {errorMessage.length ? <div>{errorMessage}</div> : null}
       </div>
 
-      <div className="search-area">
+      <div className='search-area'>
         <input
-          type="text"
-          className="searchInput"
-          placeholder="Search by City Name or Coordinates"
+          type='text'
+          className='searchInput'
+          placeholder='Search by City Name or Coordinates'
           onChange={(e) => setInput(e.target.value)}
         ></input>
 
-        <div className="justify-center" onClick={handleSearchClick}>
+        <div className='justify-center' onClick={handleSearchClick}>
           <img src={searchicon} />
         </div>
       </div>
 
-      <div className="flex justify-center">
+      <div className='flex justify-center'>
         <div>
           {' '}
           <OneDay oneDayWeather={oneDayWeather} />
         </div>
         <div
-          className="text-center inline-block border border-black  w-6 h-6 mt-6 ml-4"
+          className='text-center inline-block border border-gray-300  w-6 h-6 mt-8 ml-4'
           onClick={() => setTempUnits(tempUnits === 'F' ? 'C' : 'F')}
         >
           {temperatureSymbol}
         </div>
       </div>
 
-      <div className="five-day-row">
+      <div className='five-day-row'>
         {fiveDayWeather.map((item) => (
           <FiveDay key={item.id} fiveDayWeather={item} />
         ))}
