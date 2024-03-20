@@ -6,7 +6,7 @@ const FiveDay = (props) => {
   const { fiveDayWeather } = props;
 
   return (
-    <div className="five-day">
+    <div className="main-div border border-gray-300 rounded-md p-4 flex flex-col items-center justify-center mx-2">
       <div className="dayoftheweek" >{fiveDayWeather ? fiveDayWeather.dayOfWeek : ''} </div>
       <div className="weather-icon">
         <img src={getWeatherIcon(fiveDayWeather ? fiveDayWeather.weather: '')} alt="Weather Icon" />

@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.main-container {
-  @apply bg-red-500;
+
+/* .main-container {
   width: auto;
   height: auto;
   margin: 0 auto;
   margin-top: 75px;
   border-radius: 12px;
   background-image: linear-gradient(to bottom, #007bff, #ffffff);
-}
+} */
 
 .search-area {
   display: flex;
@@ -30,11 +30,13 @@
   border-radius: 25px;
 }
 
-.search-icon {
+
+
+/* .search-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .search-icon img {
   width: 40px;
@@ -48,3 +50,4 @@
   justify-content: center;
   margin-top: 20px;
 }
+

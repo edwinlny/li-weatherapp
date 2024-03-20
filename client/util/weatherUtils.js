@@ -24,8 +24,7 @@ const getWeatherIcon = (description) => {
     return icons[iconIndex];
   }
   
-  // If no matching description found or the icon index is out of range, return the default icon
-  return icons[weatherIconMappings['default']];
+  return icons[weatherIconMappings['Clouds']];
 };
 
 export { getWeatherIcon };
