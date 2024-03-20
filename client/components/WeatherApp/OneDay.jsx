@@ -16,7 +16,7 @@ const OneDay = (props) => {
       </div>
       <div >{oneDayWeather ? Math.ceil(oneDayWeather.temp)+'°': 'N/A'}</div>
       <div >{oneDayWeather ? `Humidity: ${oneDayWeather.humidity}%`: 'N/A'}</div>
-      <div >{oneDayWeather ? `Wind: ${oneDayWeather.windspeed} mph`: 'N/A'}</div>
+      <div >{oneDayWeather ? `Wind: ${Math.ceil(oneDayWeather.windspeed)} mph`: 'N/A'}</div>
       <div >{oneDayWeather ? oneDayWeather.description : 'N/A'}</div>
     </div>
   );

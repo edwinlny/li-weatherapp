@@ -87,6 +87,7 @@ const WeatherApp = () => {
     }
   };
 
+  const temperatureSymbol = tempUnits === 'F' ? '°F' : '°C';
   const convertTemperature = (oneDay, fiveDay, type) => {
     // converts F => C
     if (type === 'C') {
@@ -142,7 +143,7 @@ const WeatherApp = () => {
           className="text-center inline-block border border-black  w-6 h-6 mt-6 ml-4"
           onClick={() => setTempUnits(tempUnits === 'F' ? 'C' : 'F')}
         >
-          {tempUnits === 'F' ? 'F' : 'C'}
+          {temperatureSymbol}
         </div>
       </div>
 
