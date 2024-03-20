@@ -14,7 +14,7 @@ const OneDay = (props) => {
       <div className="weather-icon">
         <img src={getWeatherIcon(oneDayWeather ? oneDayWeather.weather: '')} alt="Weather Icon" />
       </div>
-      <div className="temperature">{oneDayWeather ? oneDayWeather.temp: 'N/A'}</div>
+      <div className="temperature">{oneDayWeather ? Math.ceil(oneDayWeather.temp)+'°': 'N/A'}</div>
       <div className="humidity">{oneDayWeather ? `${oneDayWeather.humidity}%`: 'N/A'}</div>
       <div className="wind-speed">{oneDayWeather ? `${oneDayWeather.windspeed} mph`: 'N/A'}</div>
       <div className="description">{oneDayWeather ? oneDayWeather.description : 'N/A'}</div>

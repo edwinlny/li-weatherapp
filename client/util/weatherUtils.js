@@ -1,15 +1,9 @@
 import iconAssets from '../components/assets/icons.js'
 
-// const icons = [
-//   iconAssets.Clouds,
-//   iconAssets.Clear,
-//   iconAssets.Rain,
-//   iconAssets.Thunderstorm,
-//   iconAssets.Snow,
-//   iconAssets.searchicon,
-// ];
+
 
 const icons = iconAssets
+
 const weatherIconMappings = {
   Clouds: 0,
   Clear: 1,
@@ -23,10 +17,10 @@ const weatherIconMappings = {
 const getWeatherIcon = (description) => {
   // Check if the description exists in the 
   const iconIndex = weatherIconMappings[description];
-  console.log('iconindex', iconIndex)
   // If the description exists, return the corresponding icon from the icons array
+
+  // return iconIndex ? icons[iconIndex] : icons[5]
   if (iconIndex !== undefined && iconIndex >= 0 && iconIndex < icons.length) {
-    console.log('icons',icons[iconIndex])
     return icons[iconIndex];
   }
   
