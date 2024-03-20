@@ -14,10 +14,15 @@ const [
   searchicon,
 ] = icons;
 
-const OneDay = () => {
+const OneDay = (props) => {
+  const { oneDayWeather } = props;
+  
+
   return (
     <div className="one-day">
-      <div className="location">New York</div>
+      <div className="location">
+        {oneDayWeather ? oneDayWeather.location : 'Temp'}
+      </div>
       <div className="weather-icon">
         <img src={cloudy} />
       </div>
