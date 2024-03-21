@@ -21,7 +21,7 @@ module.exports = {
       {
         context: ['/api'],
         target: 'http://localhost:1111',
-      }
+      },
     ],
   },
   mode: 'development',
@@ -38,9 +38,9 @@ module.exports = {
         },
       },
       {
-        test: /.(css|scss)$/,
+        test: /.(css)$/,
         exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
