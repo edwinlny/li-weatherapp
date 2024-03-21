@@ -33,6 +33,11 @@ This is Edwin Leong's submission for the LI Engineering Take Home Coding Activit
 - 2. Improve Weather Data Processing
   - Address the limitation of the current weather data processing, which relies on 3-hour intervals for min/max temperature calculations. Explore options such as: - Implementing advanced data parsing techniques to extract more granular temperature data. - Integration of a paid API key to access more accurate and detailed weather information.
 - 3. Codebase Refinement and Optimization:
+
   - Review the transition from HTML to Tailwind CSS and identify opportunities to streamline the codebase.
   - Conduct a thorough code audit to identify and remove any unused or redundant code segments.
   - Implement best practices for code organization, such as modularization and component-based architecture, to enhance maintainability and scalability. i.e. adding convertTemperature to util folder.
+
+  ## Bonus Functionality
+
+  - Version control - Used feature branches, pr and release branches
