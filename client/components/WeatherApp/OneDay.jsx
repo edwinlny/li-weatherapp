@@ -4,20 +4,29 @@ import { getWeatherIcon } from '../../util/weatherUtils';
 
 const OneDay = (props) => {
   const { oneDayWeather } = props;
-  
 
   return (
-    <div className="one-day">
-      <div className="location">
+    <div className='one-day flex flex-col items-center justify-center'>
+      <div className='text-3xl'>
         {oneDayWeather ? oneDayWeather.location : 'Temp'}
       </div>
-      <div className="weather-icon">
-        <img src={getWeatherIcon(oneDayWeather ? oneDayWeather.weather: '')} alt="Weather Icon" />
+      <div className='h-20'>
+        <img
+          src={getWeatherIcon(oneDayWeather ? oneDayWeather.weather : '')}
+          alt='Weather Icon'
+          class='w-auto, h-auto'
+        />
       </div>
-      <div className="temperature">{oneDayWeather ? Math.ceil(oneDayWeather.temp)+'°': 'N/A'}</div>
-      <div className="humidity">{oneDayWeather ? `${oneDayWeather.humidity}%`: 'N/A'}</div>
-      <div className="wind-speed">{oneDayWeather ? `${oneDayWeather.windspeed} mph`: 'N/A'}</div>
-      <div className="description">{oneDayWeather ? oneDayWeather.description : 'N/A'}</div>
+      <div>{oneDayWeather ? Math.ceil(oneDayWeather.temp) + '°' : 'N/A'}</div>
+      <div>
+        {oneDayWeather ? `Humidity: ${oneDayWeather.humidity}%` : 'N/A'}
+      </div>
+      <div>
+        {oneDayWeather
+          ? `Wind: ${Math.ceil(oneDayWeather.windspeed)} mph`
+          : 'N/A'}
+      </div>
+      <div>{oneDayWeather ? oneDayWeather.description : 'N/A'}</div>
     </div>
   );
 };
