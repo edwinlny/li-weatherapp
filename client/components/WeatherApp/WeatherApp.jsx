@@ -116,7 +116,8 @@ const WeatherApp = () => {
   };
 
   return (
-    <div className='bg-gradient-to-b from-blue-500 to-white p-4 flex flex-col items-center justify-center h-screen w-screen'>
+    <div className='bg-gradient-to-b from-blue-500 to-white p-4 flex flex-col items-center justify-center min-h-screen'>
+      <div class="w-full max-w-screen-lg md:w-full">
       <div className='errorMessage'>
         {errorMessage.length ? <div>{errorMessage}</div> : null}
       </div>
@@ -151,6 +152,7 @@ const WeatherApp = () => {
         {fiveDayWeather.map((item) => (
           <FiveDay key={item.id} fiveDayWeather={item} />
         ))}
+      </div>
       </div>
     </div>
   );
